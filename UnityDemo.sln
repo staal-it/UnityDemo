@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityDemo", "UnityDemo\UnityDemo.csproj", "{A3137DDE-9500-4CDF-A4C4-19412BEEDAA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityDemo.Test", "UnityDemo.Test\UnityDemo.Test.csproj", "{D7ABF908-E203-4212-9708-890EBE2F66E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3137DDE-9500-4CDF-A4C4-19412BEEDAA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3137DDE-9500-4CDF-A4C4-19412BEEDAA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3137DDE-9500-4CDF-A4C4-19412BEEDAA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3137DDE-9500-4CDF-A4C4-19412BEEDAA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7ABF908-E203-4212-9708-890EBE2F66E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7ABF908-E203-4212-9708-890EBE2F66E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7ABF908-E203-4212-9708-890EBE2F66E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7ABF908-E203-4212-9708-890EBE2F66E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
