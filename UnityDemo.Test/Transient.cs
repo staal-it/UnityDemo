@@ -1,5 +1,7 @@
 ﻿using Microsoft.Practices.Unity;
 using NUnit.Framework;
+using Unity;
+using Unity.Lifetime;
 
 namespace UnityDemo.Test
 {

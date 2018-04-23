@@ -1,5 +1,7 @@
 ﻿using Microsoft.Practices.Unity;
 using NUnit.Framework;
+using Unity;
+using Unity.Lifetime;
 
 namespace UnityDemo.Test
 {
@@ -46,8 +48,10 @@ namespace UnityDemo.Test
 
          using (var container = new UnityContainer())
          {
-            container.RegisterType<IInterface, Implementatie>(new HierarchicalLifetimeManager());
-            container.RegisterType<IAnotherInterface, Implementatie>(new HierarchicalLifetimeManager());
+            container.RegisterType<Implementatie>(new HierarchicalLifetimeManager());
+
+            container.RegisterType<IInterface, Implementatie>();
+            container.RegisterType<IAnotherInterface, Implementatie>();
 
             var implementatieA = container.Resolve<IInterface>();
             var implementatieB = container.Resolve<IAnotherInterface>();
