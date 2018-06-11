@@ -1,8 +1,12 @@
 ﻿
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using Unity;
 using Unity.Exceptions;
 using Unity.Lifetime;
+using Unity.Registration;
 
 namespace UnityDemo.Test
 {
@@ -143,6 +147,23 @@ namespace UnityDemo.Test
          }
 
          Assert.AreEqual(1, Implementatie.DisposeCounter);
+      }
+
+      /// <summary>
+      /// 
+      /// </summary>
+      [Test]
+      public void RegisterType_MultipleImplementationSameInterfaceResolveIEnumerable_ReturnsMultipleObjects()
+      {
+         using (var container = new UnityContainer())
+         {
+            container.RegisterType<IInterface, Implementatie>("First", new HierarchicalLifetimeManager());
+            container.RegisterType<IInterface, TweedeImplementatie>("Second", new HierarchicalLifetimeManager());
+
+            var objects = container.Resolve<IEnumerable<IInterface>>();
+
+            Assert.IsTrue(objects.Count() == 2);
+         }
       }
    }
 }
